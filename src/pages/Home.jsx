@@ -73,7 +73,7 @@ const Home = () => {
       {/* <section className='h-full lg:h-fit w-full'>
         <DashboardForm />
       </section> */}
-      <OtherSection />
+      {/* <OtherSection /> */}
     </main>
   )
 }

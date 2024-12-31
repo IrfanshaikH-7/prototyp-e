@@ -4,6 +4,7 @@ import Navbar from './components/shared/Navbar'
 import Home from './pages/Home'
 import Footer from './components/shared/Footer'
 import DashboardForm from './components/home/DashboardForm'
+import Strategies from './pages/Strategies'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<DashboardForm />} />
+        <Route path="/strategies" element={<Strategies />} />
       </Routes>
       <Footer />
     </div>

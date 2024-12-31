@@ -51,6 +51,8 @@ const noSpinnerStyle = "rounded-3xl shadow-md appearance-none [&::-webkit-inner-
 
 export default function DashboardForm() {
 const [isCustomTrading, setIsCustomTrading] = useState(false)
+const [isStrategiesOpen, setIsStrategiesOpen] = useState(false)
+
 
     const [isCreateNewStrategy, setIsCreateNewStrategy] = useState(false)
   const form = useForm({
@@ -386,10 +388,18 @@ const [isCustomTrading, setIsCustomTrading] = useState(false)
 
     {/* Submit Button */}
     <div className='flex items-center gap-4'>
-    <Button type="submit" className="w-1/2 mx-auto bg-black hover:bg-black/70 hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 py-6 rounded-3xl ">
+    <Button type="submit" className="w-1/2 mx-auto bg-black hover:bg-black/70 hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 py-3 rounded-3xl ">
       Submit
     </Button>
     <div className='h-1.5 w-full bg-black rounded-full mt-1'/>
+    </div>
+    <div className='flex  w-full justify-center items-center gap-4 flex-col md:flex-row  mx-auto translate-y-2 '>
+        <Button  className=' py-3 bg-black px-10 flex-1 rounded-full'>
+           Webhook URL
+        </Button>
+        <Button className=' py-3 bg-black px-10 flex-[2] rounded-full'>
+            Alert Message
+        </Button>
     </div>
    
   </form>

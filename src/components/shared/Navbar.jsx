@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 const navLinks = [
   { name: 'Home', link: '/' },
   { name: 'Dashboard', link: '/dashboard' },
+  { name: 'Strategies', link: '/strategies' },
 ];
 
 const Navbar = () => {
