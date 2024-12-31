@@ -350,7 +350,7 @@ export default function DashboardForm() {
                     <Input
                       type="time"
                       {...field}
-                      className="w-[90px] text-sm md:text-base min[400px]:w-32"
+                      className="w-[90px] text-sm md:text-base min[400px]:w-36"
                       disabled={form.watch('selectedSession') !== `session${sessionNum}`}
                     />
                   </FormControl>
@@ -368,7 +368,7 @@ export default function DashboardForm() {
                     <Input
                       type="time"
                       {...field}
-                      className="w-[90px] text-sm md:text-base min[400px]:w-32"
+                      className="w-[90px] text-sm md:text-base min[400px]:w-36"
                       disabled={form.watch('selectedSession') !== `session${sessionNum}`}
                     />
                   </FormControl>
