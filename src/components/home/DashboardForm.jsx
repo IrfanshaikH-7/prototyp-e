@@ -87,7 +87,7 @@ const [isCustomTrading, setIsCustomTrading] = useState(false)
   const formStyle = "flex items-center gap-4 bg-neutral-100 rounded-2xl py-2 px-2 lg:px-4"
   const inputStyle = "w-60 max-w-60 mr-auto rounded-3xl"
   return (
-    <main className='w-full lg:max-w-[90%] mx-auto mt-40'>
+    <main className='w-full px-4 lg:px-0 lg:max-w-[90%] mx-auto mt-40'>
         <div className='flex justify-start items-start flex-col pb-8'>
             <h1 className='text-6xl font-bold pb-2'>Dashboard</h1>
             <div className='flex gap-4'>
