@@ -339,7 +339,7 @@ export default function DashboardForm() {
             )}
           />
           
-          <div className="flex items-center justify-between gap-4 ml-6">
+          <div className="flex items-center justify-between md:justify-start gap-4 ml-6">
             <span className="text-sm">Start</span>
             <FormField
               control={form.control}
