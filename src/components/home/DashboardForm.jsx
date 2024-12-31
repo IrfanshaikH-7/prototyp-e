@@ -91,10 +91,11 @@ export default function DashboardForm() {
             <h1 className='text-6xl font-bold pb-2'>Dashboard</h1>
             <div className='flex gap-4'>
                 <Button
+                variant={isCreateNewStrategy ? "default" : "outline"}
                 onClick={() => {
                     setIsCreateNewStrategy((prev) => !prev)
                 }}
-                className='bg-black text-xs md:text-base hover:bg-black/70 hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 py-3 rounded-3xl'>
+                className={'text-xs md:text-base hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 py-3 rounded-3xl'}>
                     Create New Strategy
                 </Button>
                 <Select >
