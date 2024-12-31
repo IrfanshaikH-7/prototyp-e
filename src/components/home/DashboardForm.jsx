@@ -68,16 +68,16 @@ export default function DashboardForm() {
 
   const dummyAccounts = ["Account 1", "Account 2", "Account 3"]
   const timeFrames = ["1m", "5m", "15m", "1h", "4h", "1d"]
-  const formStyle = "flex items-center gap-4 bg-neutral-100 rounded-2xl py-2 px-4"
+  const formStyle = "flex items-center gap-4 bg-neutral-100 rounded-2xl py-2 px-2 lg:px-4"
   const inputStyle = "w-60 max-w-60 mr-auto rounded-3xl"
   return (
-    <main className='max-w-[90%] mx-auto mt-40'>
+    <main className='w-full lg:max-w-[90%] mx-auto mt-40'>
         <div className='flex justify-start items-start'>
             <h1 className='text-6xl font-bold pb-8'>Dashboard</h1>
         </div>
 
-        <section className='flex gap-4'>
-            <div className='flex-1 rounded-3xl overflow-hidden'>
+        <section className='flex flex-col lg:flex-row gap-4'>
+            <div className='lg:flex-1 rounded-3xl h-40 lg:h-auto overflow-hidden'>
                 <img src={dashboard_img} alt="img" className='w-full h-full object-cover' />
             </div>
 
@@ -117,7 +117,7 @@ export default function DashboardForm() {
             <FormItem className={formStyle}>
               <FormLabel className="w-full">Quantity to be traded</FormLabel>
               <FormControl>
-                <Input type="number" {...field} className={`${inputStyle} ${noSpinnerStyle}`} />
+                <Input type="number" {...field} className={`${inputStyle} ${noSpinnerStyle} max-w-[136px]`} />
               </FormControl>
               <FormMessage />
             </FormItem>

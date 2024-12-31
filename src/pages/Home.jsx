@@ -69,7 +69,7 @@ const Home = () => {
 
 
       {/* Third Section */}
-      <section className=' h-screen w-full'>
+      <section className='h-full lg:h-screen w-full'>
         <DashboardForm />
       </section>
     </main>
