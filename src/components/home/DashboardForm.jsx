@@ -104,7 +104,7 @@ export default function DashboardForm() {
                   </SelectContent>
                 </Select>
               </FormControl>
-              <FormMessage />
+              {/* <FormMessage /> */}
             </FormItem>
           )}
         />
@@ -119,7 +119,7 @@ export default function DashboardForm() {
               <FormControl>
                 <Input type="number" {...field} className={`${inputStyle} ${noSpinnerStyle} max-w-[136px]`} />
               </FormControl>
-              <FormMessage />
+              {/* <FormMessage /> */}
             </FormItem>
           )}
         />
@@ -162,7 +162,7 @@ export default function DashboardForm() {
                   </FormControl>
                 )}
               />
-              <FormMessage />
+              {/* <FormMessage /> */}
             </FormItem>
           )}
         />
@@ -208,7 +208,7 @@ export default function DashboardForm() {
                   </FormControl>
                 )}
               />
-              <FormMessage />
+              {/* <FormMessage /> */}
             </FormItem>
           )}
         />
@@ -241,7 +241,7 @@ export default function DashboardForm() {
                   </FormControl>
                 )}
               />
-              <FormMessage />
+              {/* <FormMessage /> */}
             </FormItem>
           )}
         />
@@ -274,7 +274,7 @@ export default function DashboardForm() {
                   </FormControl>
                 )}
               />
-              <FormMessage />
+              {/* <FormMessage /> */}
             </FormItem>
           )}
         />
