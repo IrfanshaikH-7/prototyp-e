@@ -339,7 +339,7 @@ export default function DashboardForm() {
             )}
           />
           
-          <div className="flex items-center justify-between md:justify-start gap-4 ml-6">
+          <div className="flex items-center justify-between  gap-4 ml-6">
             <span className="text-sm">Start</span>
             <FormField
               control={form.control}
@@ -350,7 +350,7 @@ export default function DashboardForm() {
                     <Input
                       type="time"
                       {...field}
-                      className="w-[90px] text-sm md:text-base min[400px]:w-36"
+                      className="w-[90px] text-sm min-[400px]:w-36"
                       disabled={form.watch('selectedSession') !== `session${sessionNum}`}
                     />
                   </FormControl>
@@ -368,7 +368,7 @@ export default function DashboardForm() {
                     <Input
                       type="time"
                       {...field}
-                      className="w-[90px] text-sm md:text-base min[400px]:w-36"
+                      className="w-[90px] text-sm  min-[400px]:w-36"
                       disabled={form.watch('selectedSession') !== `session${sessionNum}`}
                     />
                   </FormControl>
