@@ -3,6 +3,7 @@ import ImageOverlay from '../components/shared/ImageOverlay'
 import { Button } from '@/components/ui/button'
 import { ArrowRightIcon } from 'lucide-react'
 import DashboardForm from '@/components/home/DashboardForm'
+import OtherSection from '@/components/home/OtherSection'
 
 const mts = 'mt-52 min-[390px]:mt-[220px] min-[415px]:mt-[240px] min-[445px]:mt-[260px] min-[485px]:mt-[280px] min-[525px]:mt-[300px] min-[565px]:mt-[320px] min-[600px]:mt-[370px] min-[689px]:mt-[420px] md:mt-0'
 const mts2 = '-mt-14 md:mt-0'
@@ -69,9 +70,10 @@ const Home = () => {
 
 
       {/* Third Section */}
-      <section className='h-full lg:h-screen w-full'>
+      <section className='h-full lg:h-fit w-full'>
         <DashboardForm />
       </section>
+      <OtherSection />
     </main>
   )
 }
