@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/form"
 import { dashboard_img } from '@/assets'
 import { ArrowLeftIcon } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 // Define the form schema
 const formSchema = z.object({
@@ -101,16 +102,9 @@ const [isStrategiesOpen, setIsStrategiesOpen] = useState(false)
                 className={'text-xs md:text-sm hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 py-3 rounded-3xl'}>
                     Create New Strategy
                 </Button>
-                <Select >
-                    <SelectTrigger className='w-[170px] md:w-[200px] bg-black text-white hover:bg-black/70 hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 py-3 rounded-3xl'>
-                        <SelectValue placeholder="List of Strategies" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="strategy1">Strategy One</SelectItem>
-                        <SelectItem value="strategy2">Strategy Two</SelectItem>
-                        <SelectItem value="strategy3">Strategy Three</SelectItem>
-                    </SelectContent>
-                </Select>
+                <Link to='/strategies' className='py-2 text-sm px-10 w-[170px] md:w-[200px] bg-black text-white hover:bg-black/70 hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 rounded-3xl'>
+                    List of Strategies
+                </Link>
             </div>
         </div>
 {
