@@ -9,5 +9,6 @@ import img_1 from './images/img-1.png'
 import img_2 from './images/img-2.png'
 import img_3 from './images/img-3.png'
 
+import dashboard_img from './images/dashboard.jpg'
 
-export { logo ,agri_drone, eia_logo, pm_1, zed_logo, bharat_entrepreneurship, img_1, img_2, img_3, }
+export { logo ,agri_drone, eia_logo, pm_1, zed_logo, bharat_entrepreneurship, img_1, img_2, img_3, dashboard_img }
