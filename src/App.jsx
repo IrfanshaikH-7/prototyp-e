@@ -3,6 +3,7 @@ import LenisScroll from './components/shared/LenisScroll'
 import Navbar from './components/shared/Navbar'
 import Home from './pages/Home'
 import Footer from './components/shared/Footer'
+import DashboardForm from './components/home/DashboardForm'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<DashboardForm />} />
       </Routes>
       <Footer />
     </div>

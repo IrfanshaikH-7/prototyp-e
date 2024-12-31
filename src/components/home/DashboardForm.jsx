@@ -47,10 +47,11 @@ const formSchema = z.object({
   session3Start: z.string().optional(),
   session3End: z.string().optional(),
 })
-
 const noSpinnerStyle = "rounded-3xl shadow-md appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
 
 export default function DashboardForm() {
+const [isCustomTrading, setIsCustomTrading] = useState(false)
+
     const [isCreateNewStrategy, setIsCreateNewStrategy] = useState(false)
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -112,6 +113,7 @@ export default function DashboardForm() {
         </div>
 {
     isCreateNewStrategy ? (
+      <>
         <section className='flex flex-col lg:flex-row gap-4'>
         <div className='lg:flex-1 rounded-3xl h-40 lg:h-auto overflow-hidden'>
             <img src={dashboard_img} alt="img" className='w-full h-full object-cover' />
@@ -380,26 +382,7 @@ export default function DashboardForm() {
       ))}
     </div>
      {/* Custom Trading Ways Checkbox */}
-     <FormField
-      control={form.control}
-      name="customTradingWays"
-      render={({ field }) => (
-        <FormItem className="flex items-center ml-[18px] gap-2">
-          <FormControl>
-            <input
-              type="checkbox"
-              checked={field.value}
-              onChange={field.onChange}
-              className="cursor-pointer  checked:bg-green-500 checked:text-green-500"
-            />
-          </FormControl>
-          <p className="text-sm text-gray-600">
-            We can create your own ways of writing, click here to know more
-            <ArrowLeftIcon className='w-4 h-4 inline-block lg:ml-2' />
-          </p>
-        </FormItem>
-      )}
-    />
+    
 
     {/* Submit Button */}
     <div className='flex items-center gap-4'>
@@ -410,9 +393,25 @@ export default function DashboardForm() {
     </div>
    
   </form>
+  
 </Form>
 
     </section>
+    <div className="flex items-center space-x-2 ml-4 mt-4">
+        <Checkbox
+            id="custom-trading"
+            className="data-[state=checked]:bg-green-500 data-[state=checked]:border-green-500"
+            onCheckedChange={(checked) => setIsCustomTrading(checked)}
+        />
+        <label
+            htmlFor="custom-trading"
+            className="text-sm text-gray-600 flex items-center gap-2"
+        >
+            We can create your own ways of writing, click here to know more
+            <ArrowLeftIcon className='w-4 h-4' />
+        </label>
+    </div>
+    </>
     ) : (null
     )
 }

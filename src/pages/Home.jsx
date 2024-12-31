@@ -70,9 +70,9 @@ const Home = () => {
 
 
       {/* Third Section */}
-      <section className='h-full lg:h-fit w-full'>
+      {/* <section className='h-full lg:h-fit w-full'>
         <DashboardForm />
-      </section>
+      </section> */}
       <OtherSection />
     </main>
   )

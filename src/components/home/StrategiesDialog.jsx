@@ -48,11 +48,10 @@ export default function StrategiesDialog({ isOpen, close }) {
 
   return (
     <Dialog open={isOpen} onOpenChange={close}>
-      <DialogContent className="w-[96%] rounded-xl sm:max-w-[625px]">
-        <DialogHeader>
-          <DialogTitle>List of Strategies</DialogTitle>
-        </DialogHeader>
-        <div className="border overflow-hidden rounded-xl ">
+      <DialogContent className="w-[96%] rounded-xl h-[55vh] items-start md:min-h-[95vh] sm:max-w-[95%]">
+      <section className="">
+        <h2 className="text-2xl font-bold">List of Strategies</h2>
+        <div className="border overflow-hidden rounded-xl  mt-4">
         <Table className="border">
           <TableHeader>
             <TableRow>
@@ -100,6 +99,7 @@ export default function StrategiesDialog({ isOpen, close }) {
           </TableBody>
         </Table>
         </div>
+        </section>
        
       </DialogContent>
     </Dialog>
