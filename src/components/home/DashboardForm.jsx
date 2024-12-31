@@ -295,7 +295,7 @@ export default function DashboardForm() {
               </FormControl>
               <p className="text-sm text-gray-600">
                 We can create your own ways of writing, click here to know more
-                <ArrowLeftIcon className='w-4 h-4 inline-block ml-2' />
+                <ArrowLeftIcon className='w-4 h-4 inline-block lg:ml-2' />
               </p>
             </FormItem>
           )}
