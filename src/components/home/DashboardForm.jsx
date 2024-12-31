@@ -95,7 +95,7 @@ export default function DashboardForm() {
                 onClick={() => {
                     setIsCreateNewStrategy((prev) => !prev)
                 }}
-                className={'text-xs md:text-base hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 py-3 rounded-3xl'}>
+                className={'text-xs md:text-sm hover:-rotate-1 hover:scale-105 transition-all duration-300 translate-y-1 py-3 rounded-3xl'}>
                     Create New Strategy
                 </Button>
                 <Select >
