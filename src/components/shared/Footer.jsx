@@ -5,10 +5,10 @@ import { logo } from '../../assets'
 
 export default function Footer() {
   return (
-    <footer className='p-2 mt-20'>
+    <footer className='p-2 mt-20 shapedividers_com-6866'>
 
 
-    <main className='bg-black h-full md:h-60 py-8 flex-col md:flex-row flex items-start md:items-center justify-between px-4 md:px-20 rounded-xl'>
+    <main className='border-t-2 h-full md:h-60 py-8 flex-col md:flex-row flex items-start md:items-center justify-between px-4 md:px-20 '>
       {/* logo */}
      <div className='flex flex-col items-start justify-center'>
       <h1 className='text-3xl font-bold flex items-center flex-row'>
