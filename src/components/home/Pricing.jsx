@@ -9,7 +9,7 @@ export default function Pricing() {
       channels: "100+ Channels",
       price: 49.99,
       icon: grain_1,
-      color: "#6b46c1", // Purple shade
+      color: "#6b46c1", 
     },
     {
       name: "Premium Bundle",
@@ -17,7 +17,7 @@ export default function Pricing() {
       channels: "150+ Channels",
       price: 79.99,
       icon: grain_2,
-      color: "#d53f8c", // Pink shade
+      color: "#00cccc", 
       popular: true,
     },
     {
@@ -26,16 +26,21 @@ export default function Pricing() {
       channels: "200+ Channels",
       price: 109.99,
       icon: grain_3,
-      color: "#e53e3e", // Red shade
+      color: "#5e7af2",
     },
   ]
 
   return (
     <div className="py-12 px-4">
+      <div className='pb-8'>
+
+      <h3 className='text-3xl font-extrabold text-center '>Affordable Plans for Every Budget</h3>
+      <p className='text-lg font-semibold text-neutral-700 text-center '>Choose a plan that works for you and start enjoying fast internet and TV today!</p>
+      </div>
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8">
           {pricingData.map((plan, index) => (
-            <div 
+            <div
               key={index}
               className="relative space-y-4 rounded-lg overflow-hidden  bg-white"
             >
@@ -43,7 +48,7 @@ export default function Pricing() {
               <div 
                 className=" h-20 relative text-white border rounded-full overflow-hidden"
               >
-                <span className="text-3xl font-bold relative z-10 flex items-center justify-center h-full">${plan.name}</span>
+                <span className="text-3xl font-bold relative z-10 flex items-center justify-center h-full">{plan.name}</span>
                 <img src={plan.icon} alt={plan.name} className="w-full h-full object-cover absolute top-0 left-0 z-0" />
               </div>
 
@@ -65,19 +70,15 @@ export default function Pricing() {
                   </div>
                   </div>
                 </div>
-                <ul className="space-y-4">
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Internet Speed: {plan.speed}
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
+                <ul className="space-y-2 mt-2 font-bold">
+                  <li className="flex items-center justify-center">
                     {plan.channels}
                   </li>
+
+                  <li className="flex items-center justify-center">
+                    Internet Speed: {plan.speed}
+                  </li>
+               
                 </ul>
               </div>
 
@@ -85,7 +86,7 @@ export default function Pricing() {
               <div className="p-6 pt-0">
                 <button
                   style={{ backgroundColor: plan.color }}
-                  className="w-full py-3 px-4 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full py-3 px-4 rounded-3xl text-white font-semibold hover:opacity-90 transition-opacity"
                 >
                   ORDER NOW
                 </button>
