@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html{
+  height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -92,7 +97,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground bg-black;
   }
 }
 

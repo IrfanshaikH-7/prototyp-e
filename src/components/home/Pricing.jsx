@@ -31,9 +31,8 @@ export default function Pricing() {
   ]
 
   return (
-    <div className="py-12 px-4">
+    <div id='pricing' className="py-12 px-4 ">
       <div className='pb-8'>
-
       <h3 className='text-3xl font-extrabold text-center '>Affordable Plans for Every Budget</h3>
       <p className='text-lg font-semibold text-neutral-700 text-center '>Choose a plan that works for you and start enjoying fast internet and TV today!</p>
       </div>

@@ -10,12 +10,13 @@ import PlansCTA from '@/components/home/PlansCTA'
 import Testimonials from '@/components/home/Testimonials'
 import FAQs from '@/components/home/FAQs'
 import Pricing from '@/components/home/Pricing'
+import EasyInstallment from '@/components/home/EasyInstallment'
 
 const mts = 'mt-52 min-[390px]:mt-[220px] min-[415px]:mt-[240px] min-[445px]:mt-[260px] min-[485px]:mt-[280px] min-[525px]:mt-[300px] min-[565px]:mt-[320px] min-[600px]:mt-[370px] min-[689px]:mt-[420px] md:mt-0'
 const mts2 = '-mt-14 md:mt-0'
 const Home = () => {
   return (
-    <main  className="relative w-full pl-2 pr-2">
+    <main  className="relative w-full pl-2 pr-2 ">
       {/* First Section - Hero */}
       <section className="relative h-fit md:h-[67.5vh]  w-full rounded-2xl overflow-hidden  mt-[100px]">
         {/* Image Overlay Container */}
@@ -57,6 +58,7 @@ const Home = () => {
       <Testimonials/>
       <FAQs/>
       <Pricing/>
+      <EasyInstallment />
       </section>
       
     

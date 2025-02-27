@@ -2,6 +2,14 @@
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 
+// Global flag to control pausing
+export let isLenisPaused = false;
+
+// Helper to update the paused state
+export const setLenisPaused = (paused) => {
+  isLenisPaused = paused;
+};
+
 const LenisScroll = () => {
   const lenisRef = useRef(null);
 
@@ -16,7 +24,10 @@ const LenisScroll = () => {
     lenisRef.current = newLenis;
 
     function raf(time) {
-      lenisRef.current?.raf(time);
+      // Only update Lenis if not paused
+      if (!isLenisPaused) {
+        lenisRef.current?.raf(time);
+      }
       requestAnimationFrame(raf);
     }
 
@@ -30,4 +41,4 @@ const LenisScroll = () => {
   return null;
 };
 
-export default LenisScroll; 
+export default LenisScroll;

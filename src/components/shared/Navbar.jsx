@@ -9,13 +9,13 @@ const navLinks = [
     name: 'Services',
     link: '#',
     dropdownItems: [
-      { name: 'Digital Cable TV', link: '/services/cable-tv' },
-      { name: 'ISP', link: '/services/isp' },
-      { name: 'Leased Line', link: '/services/leased-line' },
+      { name: 'Digital Cable TV', link: 'services' },
+      { name: 'ISP', link: 'services' },
+      { name: 'Leased Line', link: '#services' },
     ]
   },
-  { name: 'Pricing', link: '/pricing' },
-  { name: 'Support', link: '/support' },
+  { name: 'Pricing', link: 'pricing' },
+  { name: 'Support', link: 'support' },
 ];
 
 const Navbar = () => {
@@ -50,6 +50,20 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const headerOffset = 70; // Adjust this value based on your header height
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <header 
       className={`fixed  top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
@@ -82,7 +96,17 @@ const Navbar = () => {
               onMouseLeave={() => link.dropdownItems && setActiveDropdown(null)}
             >
               <Link 
-                to={link.link}
+                to={link.link === 'pricing' || link.link === 'support' ? '#' : link.link}
+                onClick={(e) => {
+                  if (link.link === 'pricing' || link.link === 'support') {
+                    e.preventDefault();
+                    scrollToSection(link.link);
+                  }
+                  if (link.dropdownItems) {
+                    e.preventDefault();
+                    setActiveDropdown(activeDropdown === link.name ? null : link.name);
+                  }
+                }}
                 className={`relative transition-all duration-300 
                   ${scrolled || !isHomePage ? 'text-gray-800' : 'text-gray-800'}
                   ${link.dropdownItems ? 'cursor-pointer flex items-center gap-1' : ''}
@@ -91,12 +115,7 @@ const Navbar = () => {
                     : !link.dropdownItems 
                     ? 'after:content-[""] after:absolute after:w-0 after:h-0.5 after:bg-bluvy after:left-1/2 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full hover:after:left-0' 
                     : ''}`}
-                onClick={(e) => {
-                  if (link.dropdownItems) {
-                    e.preventDefault();
-                    setActiveDropdown(activeDropdown === link.name ? null : link.name);
-                  }
-                }}
+             
               >
                 {link.name}
                 {link.dropdownItems && (
@@ -124,7 +143,12 @@ const Navbar = () => {
                       key={item.name}
                       to={item.link}
                       className="block px-4 py-2.5 text-gray-800 hover:bg-gray-50 transition-colors duration-150 text-sm"
-                      onClick={() => setActiveDropdown(null)}
+                      onClick={(e) => 
+                        {
+                          e.preventDefault();
+                          setActiveDropdown(null);
+                          scrollToSection(item.link);
+                      }}
                     >
                       {item.name}
                     </Link>
@@ -212,6 +236,7 @@ const Navbar = () => {
                         onClick={() => {
                           setIsMenuOpen(false);
                           setActiveDropdown(null);
+                          scrollToSection(item.link);
                         }}
                       >
                         {item.name}

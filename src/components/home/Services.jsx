@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Services() {
   return (
-    <section className='mt-16'>
+    <section id='services' className='pt-16 mt-4'>
         <div className='text-center max-w-3xl mx-auto pb-20'>
 
         <h4 className='font-extrabold text-4xl '>Internet & TV Plans to Fit Your Lifestyle</h4>
